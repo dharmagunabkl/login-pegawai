@@ -3,23 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - SPINTAR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Dashboard - SPINTAR</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="login-container">
-    <h1>SPINTAR</h1>
-    <p class="tagline">Sistem Pelaporan Integratif dan Transparan</p>
-    
-    <div class="login-box">
-      <h2>Login Pegawai</h2>
-      <input type="text" id="inputNama" placeholder="Masukkan nama lengkap Anda" />
-      <button onclick="login()">Masuk</button>
-      <p id="error" class="error"></p>
-    </div>
+  <div class="dashboard-container">
+    <h1>Selamat Datang di SPINTAR</h1>
+    <p class="desc">Sistem Pelaporan Integratif dan Transparan</p>
+    <h2 id="greeting"></h2>
+
+    <ul>
+      <li><a href="https://docs.google.com/spreadsheets/d/1iCn3o62poZaDrsOGq5b_oPEZqXKm0L4D/edit?gid=899331990#gid=899331990" target="_blank">📄 SPJ Perjalanan Dinas</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1IsxevQDOKo87C7PC3UvWlBuMkiYd27V0/edit?usp=sharing" target="_blank">📦 SPJ Belanja Barang ATENSI</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1OBn2ougUA3LoqphlG09CCEMd71C8t-4Y/edit?usp=sharing" target="_blank">🛍️ SPJ Belanja Barang</a></li>
+    </ul>
+
+    <button onclick="logout()">Keluar</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const nama = localStorage.getItem("namaPegawai");
+    if (!nama) {
+      alert("Silakan login terlebih dahulu.");
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("greeting").textContent = `Halo, ${nama}!`;
+    }
+
+    function logout() {
+      localStorage.removeItem("namaPegawai");
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
