@@ -2,38 +2,35 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.container {
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
-.login-box,
-.dashboard-box {
-  background: rgba(255, 255, 255, 0.92);
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
+.container {
+  max-width: 400px;
   width: 100%;
-  max-width: 420px;
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
 .logo {
-  width: 120px;
-  margin: 0 auto 20px;
+  width: 100px;
+  margin: 0 auto 15px;
   display: block;
 }
 
 h1 {
-  margin: 10px 0;
-  font-size: 26px;
-  color: #2b2b2b;
+  margin-bottom: 5px;
+  color: #2c3e50;
 }
 
 .tagline {
@@ -50,41 +47,46 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 button {
-  background-color: #2b7cff;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  background-color: #2c3e50;
+  color: #fff;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
   font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #135cd6;
+  background-color: #34495e;
 }
 
-ul {
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.menu {
   list-style: none;
   padding: 0;
   margin: 20px 0;
 }
 
-ul li {
+.menu li {
   margin: 10px 0;
 }
 
-ul li a {
+.menu a {
+  color: #2c3e50;
   text-decoration: none;
-  color: #2b7cff;
   font-weight: bold;
 }
 
-.error {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
+.menu a:hover {
+  text-decoration: underline;
 }
