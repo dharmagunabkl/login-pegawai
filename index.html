@@ -1,132 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPINTAR - Login Pegawai</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - SPINTAR</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #2980b9, #6dd5fa);
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      color: #333;
-    }
-
-    .login-container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      width: 90%;
-      max-width: 400px;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-      color: #2c3e50;
-    }
-
-    .tagline {
-      font-style: italic;
-      color: #7f8c8d;
-      margin-bottom: 30px;
-    }
-
-    input, button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    button {
-      background-color: #2980b9;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #1e6a9e;
-    }
-
-    #error {
-      color: red;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    .logo {
-      width: 60px;
-      margin-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="login-container">
-    <img src="logo.png" alt="Logo SPINTAR" class="logo">
     <h1>SPINTAR</h1>
     <p class="tagline">Sistem Pelaporan Integratif dan Transparan</p>
-    <input list="namaList" id="inputNama" placeholder="Ketik atau pilih nama Anda">
-    <datalist id="namaList"></datalist>
-    <button onclick="login()">Masuk</button>
-    <p id="error"></p>
+    
+    <div class="login-box">
+      <h2>Login Pegawai</h2>
+      <input type="text" id="inputNama" placeholder="Masukkan nama lengkap Anda" />
+      <button onclick="login()">Masuk</button>
+      <p id="error" class="error"></p>
+    </div>
   </div>
 
-  <script>
-    const daftarPegawai = [
-      "Syam Wuryani", "Septian Darma Putra Siagian", "Dardi", "Imi Fitriah", "Joko Juniarto",
-      "Kartika Ari Pratama", "Wahyu Ari Wibowo", "Dwi Sukma Oktaviani", "Robin Hood", "Triyoni Rakhmawati",
-      "Leni Marlina", "Mimi Wijayanti", "Darwanti", "Marvikatin", "Sunardi", "Yosi Yomarta", "Nova Rustanti",
-      "Nanik Kurnianingsih", "Halbet Julianto", "Nasirwan", "Ricky Casanopa", "Elsa Refika Pertiwi",
-      "Mohamad Ridwan Soleh Ruslan Syafi'i", "Erlita Aryani", "Dwickey Nurfitriani Mardhotillah",
-      "Dwi Septi Aryani", "Diah Saraswati", "Geinte Bella Lagenda", "Tri Artarina", "Rita Effriani",
-      "Sri Martini", "Elvis Srirahmi", "Dilin", "Gusti Abdi Rahman", "Nyayu Yulia", "Eko Agusfian",
-      "Sasdiarman", "Yuristen Hadi", "Surya Raymond", "Suyanto", "Jang Doralok", "Wahyu Sukamto",
-      "Gumanto", "Edi Riskando", "Martini", "Lilik Nur Rokhmah", "Restu Dwi Kurniaty", "Elli Nurhayati",
-      "Muhammad Muhlisin", "Arianda Nugra Gamas", "Nami Purwanti", "Radial Fajri", "Rahmat Kevin Praditia",
-      "Annisa Ayu Lestari", "Nada Nur Sella", "Sherly Yuniarsi", "Susilo", "Afri Wiranda", "Elysabet Rigensi",
-      "Sarif Rendi Susanto", "Subhan", "Lenkis Mahayati", "Halidi Hermanto", "Irna Rosalina", "Rista Andela",
-      "Yulistia Pradini Astari", "Nginda Annisa Aiyun", "Dede Rahman", "Yudi Novian", "Azuan Zoni", "Supono",
-      "Miskum", "Febri Prawiro", "Andi Saputra", "Odiarman Hasibuan", "Andi Susandri", "Iqbal Ramadhan",
-      "Ilham Hidayat", "Jesi Duanty"
-    ];
-
-    // Isi datalist otomatis
-    const datalist = document.getElementById("namaList");
-    daftarPegawai.forEach(nama => {
-      const option = document.createElement("option");
-      option.value = nama;
-      datalist.appendChild(option);
-    });
-
-    function login() {
-      const inputNama = document.getElementById("inputNama").value.trim();
-      const error = document.getElementById("error");
-
-      if (!inputNama) {
-        error.textContent = "⚠️ Nama tidak boleh kosong.";
-        return;
-      }
-
-      const match = daftarPegawai.find(n => n.toLowerCase() === inputNama.toLowerCase());
-
-      if (match) {
-        localStorage.setItem("namaPegawai", match);
-        window.location.href = "dashboard.html";
-      } else {
-        error.textContent = "❌ Nama tidak ditemukan. Pastikan Anda memilih dari daftar.";
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
