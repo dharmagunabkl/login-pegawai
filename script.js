@@ -17,13 +17,14 @@ const daftarPegawai = [
 ];
 
 function login() {
-  const inputNama = document.getElementById("inputNama").value.trim();
+  const nama = document.getElementById("inputNama").value.trim();
+  const password = document.getElementById("inputPassword").value;
   const error = document.getElementById("error");
 
-  if (daftarPegawai.includes(inputNama)) {
-    localStorage.setItem("namaPegawai", inputNama);
+  if (daftarPegawai.includes(nama) && password === "Salemba@28") {
+    localStorage.setItem("namaPegawai", nama);
     window.location.href = "dashboard.html";
   } else {
-    error.textContent = "❌ Nama tidak ditemukan. Coba periksa kembali.";
+    error.textContent = "❌ Nama atau password salah.";
   }
 }
