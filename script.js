@@ -17,12 +17,12 @@ const daftarPegawai = [
 ];
 
 function login() {
-  const nama = document.getElementById("inputNama").value.trim();
-  const password = document.getElementById("inputPassword").value;
+  const inputNama = document.getElementById("inputNama").value.trim();
+  const inputPassword = document.getElementById("inputPassword").value;
   const error = document.getElementById("error");
 
-  if (daftarPegawai.includes(nama) && password === "Salemba@28") {
-    localStorage.setItem("namaPegawai", nama);
+  if (daftarPegawai.includes(inputNama) && inputPassword === "Salemba@28") {
+    localStorage.setItem("namaPegawai", inputNama);
     window.location.href = "dashboard.html";
   } else {
     error.textContent = "❌ Nama atau password salah.";
