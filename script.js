@@ -80,10 +80,10 @@ const daftarPegawai = ["Syam Wuryani",
 ];
 
 function login() {
-    const nama = document.getElementById("daftarPegawai").value.trim();
+    const daftarPegawai = document.getElementById("daftarPegawai").value.trim();
     const error = document.getElementById("error");
-    if (pegawai.includes(nama)) {
-        localStorage.setItem("daftarPegawai", nama);
+    if (pegawai.includes(daftarPegawai)) {
+        localStorage.setItem("daftarPegawai", daftarPegawai);
         window.location.href = "dashboard.html";
     } else {
         error.textContent = "Nama tidak ditemukan.";
