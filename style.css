@@ -1,61 +1,52 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('img/background.jpg') no-repeat center center fixed;
+  font-family: Arial, sans-serif;
+  background-color: #dce5d6; /* hijau sage */
   background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #f5f5f5;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 12px;
   text-align: center;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 128, 96, 0.2);
-}
-
-.login-box h1 {
-  margin-bottom: 5px;
-  font-size: 28px;
-  color: #355e3b; /* Dark sage green */
-}
-
-.tagline {
-  margin-bottom: 20px;
-  font-style: italic;
-  color: #6a8372; /* Muted sage tone */
-}
-
-input[type="text"],
-input[type="password"] {
   width: 100%;
-  padding: 12px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
   margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #aac7b2; /* Light sage border */
-  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
 }
 
 button {
-  width: 100%;
-  padding: 12px;
-  background-color: #6a8372; /* Medium sage green */
+  background-color: #88b788;
   color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #557c62; /* Darker sage */
+  background-color: #76a976;
 }
 
 .error {
@@ -63,14 +54,8 @@ button:hover {
   margin-top: 10px;
 }
 
-.logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
 .watermark {
+  font-size: 12px;
+  color: #666;
   margin-top: 20px;
-  font-size: 13px;
-  color: #999;
 }
