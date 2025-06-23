@@ -23,9 +23,9 @@ body {
 }
 
 .logo {
-  width: 100px;
-  margin: 0 auto 15px;
-  display: block;
+  width: 130px; /* Perbesar logo */
+  height: auto;
+  margin-bottom: 20px;
 }
 
 h1 {
