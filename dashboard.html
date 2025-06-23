@@ -8,34 +8,28 @@
 </head>
 <body>
   <div class="container">
-    <div class="login-box">
-      <img src="img/logo.png" alt="Logo SPINTAR" class="logo" />
+    <div class="dashboard-box">
+      <img src="logo.png" alt="Logo SPINTAR" class="logo" />
       <h1>SPINTAR</h1>
       <p class="tagline">Sistem Pelaporan Integratif dan Transparan</p>
       <h2 id="greeting"></h2>
-
-      <ul style="list-style: none; padding: 0;">
+      <ul>
         <li><a href="https://docs.google.com/spreadsheets/d/1iCn3o62poZaDrsOGq5b_oPEZqXKm0L4D/edit?gid=899331990#gid=899331990" target="_blank">SPJ Perjalanan Dinas</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1IsxevQDOKo87C7PC3UvWlBuMkiYd27V0/edit?usp=sharing" target="_blank">SPJ Belanja Barang ATENSI</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1OBn2ougUA3LoqphlG09CCEMd71C8t-4Y/edit?usp=sharing" target="_blank">SPJ Belanja Barang</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/138vOlgPQ5MFv6aWbEtMmnxjepy9BOefTxvbYMpqjN6o/edit?usp=sharing" target="_blank">Pemantauan SP2D/SPM</a></li>
       </ul>
-
       <button onclick="logout()">Keluar</button>
     </div>
   </div>
-
   <script>
     const nama = localStorage.getItem("namaPegawai");
-    const greeting = document.getElementById("greeting");
-
     if (!nama) {
       alert("Silakan login terlebih dahulu.");
       window.location.href = "index.html";
     } else {
-      greeting.textContent = "Selamat datang, " + nama + "!";
+      document.getElementById("greeting").textContent = "Selamat datang, " + nama + "!";
     }
-
     function logout() {
       localStorage.removeItem("namaPegawai");
       window.location.href = "index.html";
