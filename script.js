@@ -16,12 +16,14 @@ const daftarPegawai = [
   "Ilham Hidayat", "Jesi Duanty"
 ];
 
+const passwordBenar = "Salemba@28";
+
 function login() {
   const inputNama = document.getElementById("inputNama").value.trim();
   const inputPassword = document.getElementById("inputPassword").value;
   const error = document.getElementById("error");
 
-  if (daftarPegawai.includes(inputNama) && inputPassword === "Salemba@28") {
+  if (daftarPegawai.includes(inputNama) && inputPassword === passwordBenar) {
     localStorage.setItem("namaPegawai", inputNama);
     window.location.href = "dashboard.html";
   } else {
