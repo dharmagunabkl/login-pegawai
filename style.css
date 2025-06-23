@@ -17,19 +17,19 @@ body {
   text-align: center;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 128, 96, 0.2);
 }
 
 .login-box h1 {
   margin-bottom: 5px;
   font-size: 28px;
-  color: #333;
+  color: #355e3b; /* Dark sage green */
 }
 
 .tagline {
   margin-bottom: 20px;
   font-style: italic;
-  color: #666;
+  color: #6a8372; /* Muted sage tone */
 }
 
 input[type="text"],
@@ -38,14 +38,14 @@ input[type="password"] {
   padding: 12px;
   margin: 10px 0;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #aac7b2; /* Light sage border */
   font-size: 16px;
 }
 
 button {
   width: 100%;
   padding: 12px;
-  background-color: #3498db;
+  background-color: #6a8372; /* Medium sage green */
   color: white;
   border: none;
   border-radius: 8px;
@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #557c62; /* Darker sage */
 }
 
 .error {
@@ -68,19 +68,23 @@ button:hover {
   height: auto;
   margin-bottom: 10px;
 }
+
 ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
+
 ul li {
   margin: 10px 0;
 }
+
 ul li a {
-  color: #3498db;
+  color: #355e3b; /* Dark sage link */
   text-decoration: none;
   font-weight: bold;
 }
+
 ul li a:hover {
   text-decoration: underline;
 }
