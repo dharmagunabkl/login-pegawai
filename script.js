@@ -16,15 +16,13 @@ const daftarPegawai = [
   "Ilham Hidayat", "Jesi Duanty"
 ];
 
-const passwordBenar = "Salemba@28";
-
 function login() {
-  const inputNama = document.getElementById("inputNama").value.trim();
-  const inputPassword = document.getElementById("inputPassword").value;
+  const nama = document.getElementById("inputNama").value.trim();
+  const password = document.getElementById("inputPassword").value;
   const error = document.getElementById("error");
 
-  if (daftarPegawai.includes(inputNama) && inputPassword === passwordBenar) {
-    localStorage.setItem("namaPegawai", inputNama);
+  if (daftarPegawai.includes(nama) && password === "Salemba@28") {
+    localStorage.setItem("namaPegawai", nama);
     window.location.href = "dashboard.html";
   } else {
     error.textContent = "❌ Nama atau password salah.";
