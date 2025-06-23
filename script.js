@@ -18,7 +18,7 @@ const daftarPegawai = [
 
 function login() {
   const nama = document.getElementById("inputNama").value.trim();
-  const password = document.getElementById("inputPassword").value;
+  const password = document.getElementById("inputPassword").value.trim();
   const error = document.getElementById("error");
 
   if (daftarPegawai.includes(nama) && password === "Salemba@28") {
