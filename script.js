@@ -1,4 +1,3 @@
-
 const daftarPegawai = [
   "Syam Wuryani", "Septian Darma Putra Siagian", "Dardi", "Imi Fitriah", "Joko Juniarto",
   "Kartika Ari Pratama", "Wahyu Ari Wibowo", "Dwi Sukma Oktaviani", "Robin Hood", "Triyoni Rakhmawati",
