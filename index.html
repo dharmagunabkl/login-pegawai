@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <img src="logo.png" alt="SPINTAR Logo" class="logo">
-        <h1>SPINTAR</h1>
-        <p>Sistem Pelaporan Integratif dan Transparan</p>
-        <small>(SPINTAR!, Lapor Keuangan Makin Pintar!)</small>
-        <input type="text" id="nama" placeholder="Masukkan nama Anda">
-        <button onclick="login()">Masuk</button>
+    <div class="container">
+        <img src="logo.png" alt="Logo SPINTAR" class="logo">
+        <h1><strong>SPINTAR</strong></h1>
+        <p class="desc">Sistem Pelaporan Integratif dan Transparan</p>
+        <p class="tagline"><em>SPINTAR! Lapor Keuangan Makin Pintar!</em></p>
+        <div class="login-box">
+            <h2>Login Pegawai</h2>
+            <input type="text" id="nama" placeholder="Masukkan Nama Anda">
+            <button onclick="login()">Masuk</button>
+            <p id="error" class="error"></p>
+        </div>
     </div>
-
-    <script src="pegawai.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

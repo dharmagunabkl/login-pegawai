@@ -1,9 +1,12 @@
+const pegawai = ['Rahmat Kevin Praditia', 'Andi', 'Sherly Yuniarsi', 'Nada Nur Sella', 'Septian Darma Putra Siagian'];
 
 function login() {
     const nama = document.getElementById("nama").value.trim();
-    if (daftarPegawai.includes(nama)) {
-        window.location.href = "dashboard.html?nama=" + encodeURIComponent(nama);
+    const error = document.getElementById("error");
+    if (pegawai.includes(nama)) {
+        localStorage.setItem("nama", nama);
+        window.location.href = "dashboard.html";
     } else {
-        alert("Nama tidak ditemukan dalam sistem.");
+        error.textContent = "Nama tidak ditemukan.";
     }
 }
