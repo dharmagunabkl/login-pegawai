@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPINTAR - Login</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Login Pegawai - SPINTAR</title>
 </head>
 <body>
-    <div class="container">
-        <img src="logo.png" alt="Logo SPINTAR" class="logo">
-        <h1><strong>SPINTAR</strong></h1>
-        <p class="desc">Sistem Pelaporan Integratif dan Transparan</p>
-        <p class="tagline"><em>SPINTAR! Lapor Keuangan Makin Pintar!</em></p>
-        <div class="login-box">
-            <h2>Login Pegawai</h2>
-            <input type="text" id="nama" placeholder="Masukkan Nama Anda">
-            <button onclick="login()">Masuk</button>
-            <p id="error" class="error"></p>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <h2>Login Pegawai</h2>
+  <input type="text" id="inputNama" placeholder="Masukkan nama pegawai">
+  <button onclick="login()">Masuk</button>
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    const daftarPegawai = [
+      "Syam Wuryani", "Septian Darma Putra Siagian", "Dardi", /* dan seterusnya... */ "Jesi Duanty"
+    ];
+
+    function login() {
+      const inputNama = document.getElementById("inputNama").value.trim();
+      const error = document.getElementById("error");
+
+      if (!inputNama) {
+        error.textContent = "⚠️ Nama tidak boleh kosong.";
+        return;
+      }
+
+      if (daftarPegawai.includes(inputNama)) {
+        localStorage.setItem("namaPegawai", inputNama);
+        window.location.href = "dashboard.html";
+      } else {
+        error.textContent = "❌ Nama tidak ditemukan. Coba periksa kembali.";
+      }
+    }
+  </script>
 </body>
 </html>
