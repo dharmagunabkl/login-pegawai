@@ -2,18 +2,31 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Login Pegawai</title>
+  <title>SPINTAR - Login Pegawai</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-box">
+  <div class="branding">
+    <img src="https://via.placeholder.com/100x100.png?text=SPINTAR" alt="Logo SPINTAR" class="logo">
+    <h1>SPINTAR</h1>
+    <p class="subjudul">Sistem Pelaporan Integratif dan Transparan</p>
+    <p class="tagline">SPINTAR! Lapor Keuangan Makin Pintar!</p>
+  </div>
+
+  <div class="container" id="login-container">
     <h2>Login Pegawai</h2>
     <input type="text" id="nama" placeholder="Masukkan nama Anda" />
     <button onclick="login()">Masuk</button>
     <p id="error" class="error"></p>
   </div>
 
-  <script src="pegawai.js"></script>
+  <div class="container" id="welcome-container" style="display:none;">
+    <h2 id="welcome-msg"></h2>
+    <a href="https://link-presensi.com">Sistem Presensi</a><br>
+    <a href="https://mail.example.com">Email Kantor</a><br><br>
+    <button onclick="logout()">Keluar</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
