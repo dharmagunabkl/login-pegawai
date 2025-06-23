@@ -22,18 +22,21 @@
   </div>
 
   <script>
-    const nama = localStorage.getItem("namaPegawai");
-    if (!nama) {
-      alert("Silakan login terlebih dahulu.");
-      window.location.href = "index.html";
-    } else {
-      document.getElementById("greeting").textContent = `Halo, ${nama}!`;
-    }
+    <script>
+  // Ambil nama pegawai yang login
+  const nama = localStorage.getItem("namaPegawai");
 
-    function logout() {
-      localStorage.removeItem("namaPegawai");
-      window.location.href = "index.html";
-    }
-  </script>
+  if (!nama) {
+    alert("Silakan login terlebih dahulu.");
+    window.location.href = "index.html";
+  } else {
+    document.getElementById("greeting").innerText = "Selamat datang, " + nama + "!";
+  }
+
+  function logout() {
+    localStorage.removeItem("namaPegawai");
+    window.location.href = "index.html";
+  }
+</script>
 </body>
 </html>
