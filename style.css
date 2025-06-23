@@ -1,76 +1,75 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #74ebd5, #ACB6E5);
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 
-.login-container, .dashboard-container {
-  max-width: 500px;
-  background: #fff;
-  margin: 60px auto;
-  padding: 30px;
-  border-radius: 15px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
-h1 {
+.login-box h1 {
   margin-bottom: 10px;
   color: #2c3e50;
+  font-size: 28px;
 }
 
-.tagline, .desc {
+.tagline {
+  margin-bottom: 25px;
   color: #7f8c8d;
-  margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .login-box input {
-  width: 90%;
+  width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
 }
 
-button {
+.login-box button {
+  width: 100%;
+  padding: 12px;
   background-color: #3498db;
   color: white;
-  padding: 12px 24px;
+  font-size: 16px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
-button:hover {
+.login-box button:hover {
   background-color: #2980b9;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-}
-
-li {
-  margin: 12px 0;
-}
-
-a {
-  text-decoration: none;
-  color: #2980b9;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: #1a5276;
-}
-
-.error {
+.error-msg {
   color: red;
   font-size: 14px;
+  margin-top: 10px;
 }
