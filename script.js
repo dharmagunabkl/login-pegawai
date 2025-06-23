@@ -1,4 +1,4 @@
-const pegawai = ["Syam Wuryani",
+const daftarPegawai = ["Syam Wuryani",
   "Septian Darma Putra Siagian",
   "Dardi",
   "Imi Fitriah",
