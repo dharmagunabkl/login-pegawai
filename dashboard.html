@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard Pegawai</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Dashboard SPINTAR</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="dashboard">
-    <h2>Selamat datang, <span id="namaPegawai"></span>!</h2>
-    <ul id="linkList"></ul>
-    <button onclick="logout()">Keluar</button>
-  </div>
-
-  <script src="pegawai.js"></script>
-  <script src="script.js"></script>
+    <div class="login-container">
+        <h2 id="greeting"></h2>
+        <ul style="text-align:left;">
+            <li><a href="https://docs.google.com/spreadsheets/d/1iCn3o62poZaDrsOGq5b_oPEZqXKm0L4D/edit?gid=899331990#gid=899331990" target="_blank">SPJ Perjalanan Dinas</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1IsxevQDOKo87C7PC3UvWlBuMkiYd27V0/edit?usp=sharing" target="_blank">SPJ Belanja Barang ATENSI</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1OBn2ougUA3LoqphlG09CCEMd71C8t-4Y/edit?usp=sharing" target="_blank">SPJ Belanja Barang</a></li>
+        </ul>
+        <button onclick="window.location.href='index.html'">Keluar</button>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nama = urlParams.get('nama');
+        document.getElementById("greeting").textContent = "Selamat datang, " + nama + "!";
+    </script>
 </body>
 </html>
