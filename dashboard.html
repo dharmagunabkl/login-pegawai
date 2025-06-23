@@ -26,17 +26,18 @@
     </div>
 
     <script>
-        // Cek apakah sudah login
-        const daftarPegawai = localStorage.getItem("daftarPegawai");
-        if (!daftarPegawai) {
+        // Ambil nama pegawai dari localStorage
+        const namaPegawai = localStorage.getItem("namaPegawai");
+
+        if (!namaPegawai) {
             alert("Silakan login terlebih dahulu.");
             window.location.href = "index.html";
         } else {
-            document.getElementById("greeting").innerText = "Selamat datang, " + daftarPegawai + "!";
+            document.getElementById("greeting").innerText = "Selamat datang, " + namaPegawai + "!";
         }
 
         function logout() {
-            localStorage.removeItem("daftarPegawai"); // Hapus data login
+            localStorage.removeItem("namaPegawai");
             window.location.href = "index.html";
         }
     </script>
